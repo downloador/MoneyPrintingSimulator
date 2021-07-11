@@ -15,4 +15,12 @@ module.GetXZ = function()
 	return {X,Z}
 end
 
+module.IsOutside = function(Min,Max,Pos)
+	if Pos.X > Min.X and Pos.X < Max.X and Pos.Z > Min.Z and Pos.Z < Max.Z then
+		return false
+	end	
+	
+	return true
+end 
+
 return module
