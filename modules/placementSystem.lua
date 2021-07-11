@@ -23,4 +23,12 @@ module.IsOutside = function(Min,Max,Pos)
 	return true
 end 
 
+module.isOccupied = function(Pos) 
+	for _,v in pairs(workspace.PlacedInstances:GetChildren()) do
+		if Pos:FuzzyEq(v.Position) then
+			return true
+		end
+	end
+end
+
 return module
